@@ -12,7 +12,7 @@ public class Main {
 //             .forEach(System.out::println);
 //     }
 // }
-List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6);
+List<Integer> list = Arrays.asList(10, 25, 31, 4, 5, 6);
 
 // Step 1: Filter
 List<Integer> filtered = list.stream()
@@ -22,14 +22,14 @@ List<Integer> filtered = list.stream()
 System.out.println("After filter: " + filtered);
 
 // Step 2: Map
-List<Integer> mapped = filtered.stream()
+List<Integer> mapped = list.stream()
         .map(x -> x * x)
         .toList();
 
 System.out.println("After map: " + mapped);
 
 // Step 3: Sorted
-List<Integer> sorted = mapped.stream()
+List<Integer> sorted =list.stream()
         .sorted()
         .toList();
 
